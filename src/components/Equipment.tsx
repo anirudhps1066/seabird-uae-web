@@ -4,6 +4,36 @@ import { Badge } from "@/components/ui/badge";
 const Equipment = () => {
   const equipmentCategories = [
     {
+      title: "Water Treatment Facility",
+      image: "/lovable-uploads/6beb144c-15c4-40e7-83e6-a1c2d14ad599.png",
+      description: "Complete water treatment facility with advanced control systems and monitoring",
+      features: ["Control panels", "High-pressure pumps", "Monitoring systems", "Industrial grade"]
+    },
+    {
+      title: "Automatic Water Softener",
+      image: "/lovable-uploads/7261a37d-105c-4b75-9043-8cb445716c3c.png",
+      description: "Digital automatic water softener system for residential and commercial use",
+      features: ["Digital control", "Automatic regeneration", "Compact design", "Energy efficient"]
+    },
+    {
+      title: "UV Sterilization Systems",
+      image: "/lovable-uploads/5adacf8c-5897-462c-bc10-2a38ef8721df.png",
+      description: "Stainless steel UV sterilization equipment for water disinfection",
+      features: ["Stainless steel construction", "UV lamps", "Flow indicators", "Easy maintenance"]
+    },
+    {
+      title: "Ozone Generation System",
+      image: "/lovable-uploads/feba79d2-b2b3-46a4-a76c-0f7d78205f7c.png",
+      description: "Advanced ozone generation system for water treatment and disinfection",
+      features: ["Ozone generation", "Control unit", "Safety features", "Medical applications"]
+    },
+    {
+      title: "Industrial RO Plant",
+      image: "/lovable-uploads/a34edde4-8b35-4460-91f5-93068862346c.png",
+      description: "Large-scale industrial reverse osmosis plant with complete automation",
+      features: ["High capacity", "Automated controls", "Multiple stages", "Industrial grade"]
+    },
+    {
       title: "Reverse Osmosis Systems",
       image: "/lovable-uploads/a4b05390-ac43-4dd8-93ed-8e1e22e48d22.png",
       description: "Complete RO water treatment facility with advanced filtration technology",
