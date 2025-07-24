@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
+import logo from '../assets/logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,16 +32,14 @@ const Header = () => {
         </div>
 
         {/* Main navigation */}
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-2">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow">
-              <span className="text-2xl text-primary-foreground font-bold">S</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-foreground">SEA BIRD</h1>
-              <p className="text-xs text-muted-foreground">Water Treatment Equipment Trading</p>
-            </div>
+            <img
+              src={logo}
+              alt="Sea Bird Logo"
+              className="h-20 w-auto object-contain"
+            />
           </div>
 
           {/* Desktop Navigation */}
