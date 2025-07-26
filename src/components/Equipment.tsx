@@ -122,35 +122,49 @@ const Equipment = () => {
         </div>
 
         {/* Specifications Table */}
-        <div className="bg-gradient-card border border-border/50 rounded-2xl p-8 shadow-card">
-          <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Equipment Specifications
-          </h3>
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b border-border">
-                  <th className="text-left py-3 px-4 font-semibold text-foreground">Category</th>
-                  <th className="text-left py-3 px-4 font-semibold text-foreground">Capacity Range</th>
-                  <th className="text-left py-3 px-4 font-semibold text-foreground">Applications</th>
-                </tr>
-              </thead>
-              <tbody>
-                {specifications.map((spec, index) => (
-                  <tr key={index} className="border-b border-border/50 hover:bg-muted/20 transition-colors duration-200">
-                    <td className="py-3 px-4 font-medium text-foreground">{spec.category}</td>
-                    <td className="py-3 px-4 text-muted-foreground">{spec.capacity}</td>
-                    <td className="py-3 px-4 text-muted-foreground">{spec.applications}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
+<div className="bg-white/90 border border-blue-100 rounded-3xl p-10 shadow-2xl transition-shadow duration-500 hover:shadow-[0_30px_50px_-10px_rgba(0,0,0,0.15)]">
+  <h3 className="text-3xl font-bold text-foreground mb-8 text-center tracking-tight">
+    Equipment Specifications
+  </h3>
+
+  <table className="w-full table-fixed border-separate border-spacing-y-4">
+    <thead>
+      <tr className="text-blue-900 bg-blue-50 border border-blue-100">
+        <th className="py-4 px-6 font-semibold text-left text-foreground rounded-l-xl">
+          Category
+        </th>
+        <th className="py-4 px-6 font-semibold text-left text-foreground">
+          Capacity Range
+        </th>
+        <th className="py-4 px-6 font-semibold text-left text-foreground rounded-r-xl">
+          Applications
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {specifications.map((spec, index) => (
+        <tr
+          key={index}
+          className="bg-white group transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md border border-blue-100 rounded-xl"
+        >
+          <td className="py-4 px-6 font-medium text-foreground rounded-l-xl">
+            {spec.category}
+          </td>
+          <td className="py-4 px-6 text-muted-foreground">{spec.capacity}</td>
+          <td className="py-4 px-6 text-muted-foreground rounded-r-xl">
+            {spec.applications}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
 
         {/* Available Products */}
-       <div className="mt-20 px-4 text-center">
-  <h3 className="text-3xl font-extrabold text-gray-800 mb-10">
+{/* Available Products */}
+<div className="mt-20 px-4 text-center">
+  <h3 className="text-3xl font-bold text-foreground mb-16 text-center">
     Available Products & Services
   </h3>
 
@@ -169,6 +183,8 @@ const Equipment = () => {
     ))}
   </div>
 </div>
+
+
 
       </div>
     </section>

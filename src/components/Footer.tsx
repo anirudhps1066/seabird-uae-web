@@ -1,154 +1,146 @@
-import { Separator } from "@/components/ui/separator";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Droplets,
+import {
   Facebook,
   Instagram,
   Linkedin,
-  Twitter
+  Twitter,
+  Phone,
+  Mail,
+  MapPin,
 } from "lucide-react";
-import logo from '../assets/logo.png';
+import logo from "@/assets/logo.png";
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+const quickLinks = [
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Products", href: "/products" },
+  { name: "Services", href: "/services" },
+  { name: "Contact", href: "/contact" },
+];
 
-  const quickLinks = [
-    { name: "About Us", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Equipment", href: "#equipment" },
-    { name: "Contact", href: "#contact" },
-  ];
+const services = [
+  "RO Systems",
+  "STP Plants",
+  "Swimming Pool Filters",
+  "Water Purification Chemicals",
+  "Water Filter Spares",
+  "RO Membranes",
+  "Filling Machine Maintenance",
+];
 
-  const services = [
-    "Reverse Osmosis Systems",
-    "Sewage Treatment Plants",
-    "Grey Water Treatment",
-    "Chemical Dosing Systems",
-    "Equipment Trading",
-    "Maintenance Services"
-  ];
+const currentYear = new Date().getFullYear();
 
+export default function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <div className="flex items-center space-x-3 mb-6">
-             <div className="flex items-center space-x-3">
-            <img
-              src={logo}
-              alt="Sea Bird Logo"
-              className="h-20 w-auto object-contain"
-            />
-          </div>
-            </div>
-            <p className="text-primary-foreground/80 leading-relaxed mb-6">
-              Expert in providing optimal water treatment solutions since 2011. 
-              We specialize in RO systems, sewage treatment, and comprehensive 
-              equipment trading services across the UAE.
-            </p>
-            
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-primary-foreground/10 hover:bg-primary-glow rounded-full flex items-center justify-center transition-colors duration-300">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-primary-foreground/10 hover:bg-primary-glow rounded-full flex items-center justify-center transition-colors duration-300">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-primary-foreground/10 hover:bg-primary-glow rounded-full flex items-center justify-center transition-colors duration-300">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-primary-foreground/10 hover:bg-primary-glow rounded-full flex items-center justify-center transition-colors duration-300">
-                <Twitter className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.href} 
-                    className="text-primary-foreground/80 hover:text-primary-glow transition-colors duration-300"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Our Services</h4>
-            <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <span className="text-primary-foreground/80 text-sm">
-                    {service}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Contact Information</h4>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <Phone className="h-5 w-5 text-primary-glow mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-primary-foreground/80 text-sm">+971 56 996 4568</p>
-                  <p className="text-primary-foreground/80 text-sm">+971 52 784 5287</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <Mail className="h-5 w-5 text-primary-glow mt-1 flex-shrink-0" />
-                <p className="text-primary-foreground/80 text-sm">seabirdwaterequip@gmail.com</p>
-              </div>
-              
-              <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-primary-glow mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-primary-foreground/80 text-sm">New Ind. Area, Ajman</p>
-                  <p className="text-primary-foreground/80 text-sm">United Arab Emirates</p>
-                </div>
-              </div>
-            </div>
-          </div>
+   <footer className="bg-gradient-to-br from-[#0a213d] to-[#051c30] text-white shadow-inner shadow-blue-900/20">
+  <div className="container mx-auto px-6 py-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      {/* Logo and About */}
+      <div>
+        <div className="bg-white p-3 rounded-xl inline-block shadow-lg shadow-blue-900/40">
+          <img
+            src={logo}
+            alt="Sea Bird Logo"
+            className="h-20 w-auto object-contain"
+          />
         </div>
+        <p className="mt-4 text-sm text-white/80 leading-relaxed">
+          Providing optimal solutions for water treatment, sewage disposal,
+          and purification systems since 2011 across the UAE.
+        </p>
 
-        <Separator className="my-8 bg-primary-foreground/20" />
+        {/* Social Icons */}
+        <div className="flex space-x-3 mt-6">
+          {[Facebook, Instagram, Linkedin, Twitter].map((Icon, idx) => (
+            <a
+              key={idx}
+              href="#"
+              className="w-10 h-10 flex items-center justify-center bg-white/10 text-white hover:bg-white/20 rounded-full transition duration-300 shadow-md shadow-blue-900/30"
+            >
+              <Icon className="w-5 h-5" />
+            </a>
+          ))}
+        </div>
+      </div>
 
-        {/* Bottom Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-primary-foreground/60 text-sm mb-4 md:mb-0">
-            © {currentYear} Sea Bird Water Treatment Equipment Trading LLC. All rights reserved.
-          </p>
-          <div className="flex space-x-6 text-sm">
-            <a href="#" className="text-primary-foreground/60 hover:text-primary-glow transition-colors duration-300">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-primary-foreground/60 hover:text-primary-glow transition-colors duration-300">
-              Terms of Service
-            </a>
-            <a href="#" className="text-primary-foreground/60 hover:text-primary-glow transition-colors duration-300">
-              Sitemap
-            </a>
+      {/* Quick Links */}
+      <div>
+        <h4 className="text-base font-semibold mb-4 text-white">
+          Quick Links
+        </h4>
+        <ul className="space-y-2 text-sm text-white/80">
+          {quickLinks.map((link, i) => (
+            <li key={i}>
+              <a
+                href={link.href}
+                className="hover:text-cyan-400 transition duration-300"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Services */}
+      <div>
+        <h4 className="text-base font-semibold mb-4 text-white">
+          Our Services
+        </h4>
+        <ul className="space-y-2 text-sm text-white/80">
+          {services.map((service, i) => (
+            <li key={i}>{service}</li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Contact Info */}
+      <div>
+        <h4 className="text-base font-semibold mb-4 text-white">
+          Contact Info
+        </h4>
+        <div className="space-y-4 text-sm text-white/80">
+          <div className="flex gap-3 items-start">
+            <Phone className="text-cyan-400 w-5 h-5 mt-1" />
+            <div>
+              <p>+971 56 996 4568</p>
+              <p>+971 52 784 5287</p>
+            </div>
+          </div>
+          <div className="flex gap-3 items-start">
+            <Mail className="text-cyan-400 w-5 h-5 mt-1" />
+            <p>seabirdwaterequip@gmail.com</p>
+          </div>
+          <div className="flex gap-3 items-start">
+            <MapPin className="text-cyan-400 w-5 h-5 mt-1" />
+            <div>
+              <p>New Ind. Area, Ajman</p>
+              <p>United Arab Emirates</p>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
-  );
-};
+    </div>
 
-export default Footer;
+    {/* Bottom Footer Section */}
+    <div className="mt-12 border-t border-white/10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-white/60">
+      <p>
+        © {currentYear} Sea Bird Water Treatment Equipment Trading LLC. All
+        rights reserved.
+      </p>
+      <div className="flex space-x-6 mt-4 md:mt-0">
+        <a href="#" className="hover:text-cyan-400 transition">
+          Privacy Policy
+        </a>
+        <a href="#" className="hover:text-cyan-400 transition">
+          Terms
+        </a>
+        <a href="#" className="hover:text-cyan-400 transition">
+          Sitemap
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  );
+}
