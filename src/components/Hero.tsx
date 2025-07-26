@@ -2,7 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Droplets, Award, Users, Phone } from "lucide-react";
 import heroImage from "@/assets/hero-water-treatment.jpg";
 
+
+
 const Hero = () => {
+ 
+
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image + Overlay */}
@@ -29,15 +33,26 @@ const Hero = () => {
           </header>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button variant="hero" size="xl" className="bg-cyan-500 hover:bg-cyan-600 text-white shadow-lg">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <Button
+              variant="hero"
+              size="xl"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white shadow-lg"
+            >
               <Phone className="h-5 w-5 mr-2" />
               Get Free Consultation
             </Button>
-            <Button variant="premium" size="xl" className="bg-white/20 text-white hover:bg-white/30 border border-white/30">
+            <Button
+              variant="premium"
+              size="xl"
+              className="bg-white/20 text-white hover:bg-white/30 border border-white/30"
+              onClick={() => {
+              window.location.href = "#equipment";
+              }}
+            >
               View Our Equipment
             </Button>
-          </div>
+            </div>
 
           {/* Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
