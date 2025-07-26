@@ -149,21 +149,27 @@ const Equipment = () => {
         </div>
 
         {/* Available Products */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-foreground mb-8">
-            Available Products & Services
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            {[
-              "RO Systems", "STP", "Swimming Pool Filters", "Water Purification Chemicals", 
-              "All Types of Water Filters", "RO Membrane & Spare Parts", "Bottle Filling Machine Maintenance"
-            ].map((product, index) => (
-              <div key={index} className="bg-gradient-card border border-border/50 rounded-lg p-4 shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-                <p className="text-sm font-medium text-foreground text-center">{product}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+       <div className="mt-20 px-4 text-center">
+  <h3 className="text-3xl font-extrabold text-gray-800 mb-10">
+    Available Products & Services
+  </h3>
+
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 group">
+    {[
+      "RO Systems", "STP", "Swimming Pool Filters", "Water Purification Chemicals",
+      "All Types of Water Filters", "RO Membrane & Spare Parts", "Bottle Filling Machine Maintenance"
+    ].map((product, index) => (
+      <div
+        key={index}
+        className="bg-white border border-gray-200 rounded-xl p-4 text-center shadow-sm 
+                   hover:bg-blue-500 hover:text-white transition-all duration-300 hover:-translate-y-1"
+      >
+        <p className="text-sm font-semibold">{product}</p>
+      </div>
+    ))}
+  </div>
+</div>
+
       </div>
     </section>
   );

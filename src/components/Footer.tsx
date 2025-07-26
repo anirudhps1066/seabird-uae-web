@@ -9,6 +9,7 @@ import {
   Linkedin,
   Twitter
 } from "lucide-react";
+import logo from '../assets/logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,13 +37,13 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-primary-glow rounded-full flex items-center justify-center">
-                <Droplets className="h-8 w-8 text-primary" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">SEA BIRD</h3>
-                <p className="text-xs text-primary-foreground/80">Water Treatment Equipment Trading</p>
-              </div>
+             <div className="flex items-center space-x-3">
+            <img
+              src={logo}
+              alt="Sea Bird Logo"
+              className="h-20 w-auto object-contain"
+            />
+          </div>
             </div>
             <p className="text-primary-foreground/80 leading-relaxed mb-6">
               Expert in providing optimal water treatment solutions since 2011. 
