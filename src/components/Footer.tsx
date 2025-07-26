@@ -31,7 +31,7 @@ const currentYear = new Date().getFullYear();
 
 export default function Footer() {
   return (
-   <footer className="bg-gradient-to-br from-[#0a213d] to-[#051c30] text-white shadow-inner shadow-blue-900/20">
+   <footer className="bg-gradient-to-br from-[#203753] to-[#051c30] text-white shadow-inner shadow-blue-900/20">
   <div className="container mx-auto px-6 py-16">
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
       {/* Logo and About */}

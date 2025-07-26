@@ -15,7 +15,7 @@ const Services = () => {
     {
       icon: <Droplets className="h-8 w-8" />,
       title: "Reverse Osmosis Treatment",
-      description: "Complete RO systems for drinking water purification, desalination of seawater, and industrial water treatment with high-pressure pumps and monitoring systems.",
+      description: "A water purification process that uses a semi-permeable membrane and applied pressure to remove ions, unwanted molecules, and larger particles from water. @ 3000 gpd to 300000 galleons pre day available.",
       features: ["Pre-treatment filters", "High-pressure pumps", "RO membrane modules", "Flow monitoring systems"]
     },
     {

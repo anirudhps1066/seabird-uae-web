@@ -94,16 +94,26 @@ const Contact = () => {
             </div>
 
             {/* Quick Actions */}
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Button variant="hero" size="lg" className="w-full">
-                <Phone className="h-5 w-5" />
-                Call Now
-              </Button>
-              <Button variant="premium" size="lg" className="w-full">
-                <MessageCircle className="h-5 w-5" />
-                WhatsApp
-              </Button>
-            </div>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <Button variant="hero" size="lg" className="w-full">
+    <Phone className="h-5 w-5" />
+    Call Now
+  </Button>
+
+  <a
+    href="https://wa.me/+918921013039?text=Hello, I am interested in your water treatment and purification solutions. Kindly share more details about your services. Thank you. - Sea Bird Website
+"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full"
+  >
+    <Button variant="hero" size="lg" className="w-full">
+      <MessageCircle className="h-5 w-5" />
+      WhatsApp
+    </Button>
+  </a>
+</div>
+
           </div>
 
           {/* Contact Form */}

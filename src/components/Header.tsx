@@ -34,13 +34,15 @@ const Header = () => {
         {/* Main navigation */}
         <div className="flex items-center justify-between py-2">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <img
-              src={logo}
-              alt="Sea Bird Logo"
-              className="h-20 w-auto content-center justify-center"
-            />
-          </div>
+          {/* Logo */}
+<div className="flex items-center space-x-3 transform -translate-y-2">
+  <img
+    src={logo}
+    alt="Sea Bird Logo"
+    className="h-16 w-auto object-contain"
+  />
+</div>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-10">
