@@ -38,12 +38,12 @@ const Header = () => {
             <img
               src={logo}
               alt="Sea Bird Logo"
-              className="h-20 w-auto object-contain"
+              className="h-20 w-auto content-center justify-center"
             />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-10">
             {navItems.map((item) => (
               <a
                 key={item.name}

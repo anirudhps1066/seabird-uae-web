@@ -4,80 +4,69 @@ import heroImage from "@/assets/hero-water-treatment.jpg";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20">
-      {/* Background */}
+    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      {/* Background Image + Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
           alt="Water Treatment Facility"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover brightness-75"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a2540]/90 to-[#193755]/60"></div>
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl">
-          <div className="mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+        <div className="max-w-4xl animate-fadeInUp">
+          <header className="mb-10">
+            <h1 className="text-4xl sm:text-6xl font-extrabold text-white leading-tight mb-6">
               Expert Water
-              <span className="block text-primary-glow">Treatment Solutions</span>
+              <span className="block text-cyan-400">Treatment Solutions</span>
             </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl leading-relaxed">
+            <p className="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl">
               Providing optimal solutions for water treatment, sewage disposal, and industrial water purification systems across the UAE since 2011.
             </p>
-          </div>
+          </header>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button variant="hero" size="xl">
-              <Phone className="h-5 w-5" />
+            <Button variant="hero" size="xl" className="bg-cyan-500 hover:bg-cyan-600 text-white shadow-lg">
+              <Phone className="h-5 w-5 mr-2" />
               Get Free Consultation
             </Button>
-            <Button variant="premium" size="xl">
+            <Button variant="premium" size="xl" className="bg-white/20 text-white hover:bg-white/30 border border-white/30">
               View Our Equipment
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex items-center gap-4 bg-card/10 backdrop-blur-sm rounded-lg p-6 border border-primary-foreground/20">
-              <div className="p-3 bg-primary-glow/20 rounded-full">
-                <Droplets className="h-8 w-8 text-primary-foreground" />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              { Icon: Droplets, value: "10+", label: "Years Experience" },
+              { Icon: Award, value: "500+", label: "Projects Completed" },
+              { Icon: Users, value: "100+", label: "Satisfied Clients" },
+            ].map(({ Icon, value, label }, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-4 bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/20 shadow-md hover:scale-105 transition-transform duration-300"
+              >
+                <div className="p-3 bg-cyan-500/20 rounded-full">
+                  <Icon className="h-8 w-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-white">{value}</h3>
+                  <p className="text-white/80">{label}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-primary-foreground">10+</h3>
-                <p className="text-primary-foreground/80">Years Experience</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 bg-card/10 backdrop-blur-sm rounded-lg p-6 border border-primary-foreground/20">
-              <div className="p-3 bg-primary-glow/20 rounded-full">
-                <Award className="h-8 w-8 text-primary-foreground" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-primary-foreground">500+</h3>
-                <p className="text-primary-foreground/80">Projects Completed</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 bg-card/10 backdrop-blur-sm rounded-lg p-6 border border-primary-foreground/20">
-              <div className="p-3 bg-primary-glow/20 rounded-full">
-                <Users className="h-8 w-8 text-primary-foreground" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-primary-foreground">100+</h3>
-                <p className="text-primary-foreground/80">Satisfied Clients</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary-foreground/50 rounded-full mt-2"></div>
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center items-start">
+          <div className="w-1 h-3 bg-white/50 rounded-full mt-2" />
         </div>
       </div>
     </section>
