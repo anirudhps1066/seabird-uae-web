@@ -116,6 +116,17 @@ export default function Footer() {
               <p>New Ind. Area, Ajman</p>
               <p>United Arab Emirates</p>
             </div>
+
+          </div>
+          <div className="flex gap-3 items-start">
+            <MapPin className="text-cyan-400 w-5 h-5 mt-1" />
+            <div>
+             <p>Seabird Water Filtration System</p>
+             <p>Payyanur, Kannur, Kerala</p>
+             <p>+91 95674 75838</p>
+
+            </div>
+            
           </div>
         </div>
       </div>
