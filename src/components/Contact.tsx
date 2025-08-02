@@ -16,7 +16,7 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Phone Numbers",
-      details: ["+971 56 996 4568", "+971 52 784 5287"],
+      details: ["+971 56 996 4568", "+971 52 784 5287", "+91 95674 75838"],
       type: "phone"
     },
     {
@@ -28,7 +28,11 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Location",
-      details: ["New Ind. Area, Ajman", "United Arab Emirates"],
+      details: [
+        "New Ind. Area, Ajman, United Arab Emirates.",
+        "Seabird Water Filtration System, Payyanur, Kannur, Kerala, India."
+  
+      ],
       type: "address"
     },
     {
