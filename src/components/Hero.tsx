@@ -74,7 +74,7 @@ return (
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white">
-                  <CountUp end={value} duration={2} suffix={suffix} />
+                  <CountUp end={value} duration={3} suffix={suffix} />
                 </h3>
                 <p className="text-white/80">{label}</p>
               </div>
