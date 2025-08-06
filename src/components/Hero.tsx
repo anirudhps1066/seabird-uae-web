@@ -43,13 +43,14 @@ return (
         {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
           <Button
-            variant="hero"
-            size="xl"
-            className="bg-cyan-500 hover:bg-cyan-600 text-white shadow-lg"
-          >
-            <Phone className="h-5 w-5 mr-2" />
-            Get Free Consultation
-          </Button>
+    variant="hero"
+    size="xl"
+    className="bg-cyan-500 hover:bg-cyan-600 text-white shadow-lg"
+    onClick={() => window.location.href = "tel:+971569964568"} // <--- Call function here
+  >
+    <Phone className="h-5 w-5 mr-2" />
+    Get Free Consultation
+  </Button>
           <Button
             variant="premium"
             size="xl"
