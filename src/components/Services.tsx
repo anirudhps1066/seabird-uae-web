@@ -119,9 +119,19 @@ const Services = () => {
               Our expert team can design and implement tailored water treatment systems 
               to meet your specific requirements and industry standards.
             </p>
-            <Button variant="hero" size="xl">
-              Request Custom Quote
-            </Button>
+            <Button
+  variant="hero"
+  size="xl"
+  onClick={() => {
+    const form = document.getElementById("contact");
+    if (form) {
+      form.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+>
+  Request Custom Quote
+</Button>
+
           </div>
         </div>
       </div>
