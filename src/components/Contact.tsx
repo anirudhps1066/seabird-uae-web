@@ -22,7 +22,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email Address",
-      details: ["seabirdwaterequip@gmail.com"],
+      details: ["info@seabirdwaterequipment.com",'sales@seabirdwaterequipment.com','thahir@seabirdwaterequipment.com' ],
       type: "email"
     },
     {

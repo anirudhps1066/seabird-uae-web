@@ -108,7 +108,7 @@ export default function Footer() {
           </div>
           <div className="flex gap-3 items-start">
             <Mail className="text-cyan-400 w-5 h-5 mt-1" />
-            <p>seabirdwaterequip@gmail.com</p>
+            <p>info@seabirdwaterequipment.com</p>
           </div>
           <div className="flex gap-3 items-start">
             <MapPin className="text-cyan-400 w-5 h-5 mt-1" />
