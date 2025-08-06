@@ -102,10 +102,16 @@ const Contact = () => {
 
             {/* Quick Actions */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-  <Button variant="hero" size="lg" className="w-full">
-    <Phone className="h-5 w-5" />
-    Call Now
-  </Button>
+  <Button
+  variant="hero"
+  size="lg"
+  className="w-full"
+  onClick={() => window.location.href = 'tel:+971569964568'}
+>
+  <Phone className="h-5 w-5 mr-2" />
+  Call Now
+</Button>
+
 
   <a
     href="https://wa.me/+971569964568?text=Hello%2C%20I%20came%20across%20your%20website%20and%20I'm%20interested%20in%20learning%20more%20about%20your%20water%20treatment%2C%20sewage%20disposal%2C%20and%20industrial%20purification%20services.%0ACould%20you%20please%20provide%20more%20information%20regarding%20your%20solutions%2C%20pricing%2C%20and%20available%20consultation%20slots%3F%0AThank%20you%20in%20advance.%0A-%20Website%20Inquiry%20via%20Sea%20Bird%20Water%20Equipment"
