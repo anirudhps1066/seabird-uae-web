@@ -59,9 +59,9 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="lg">
+            {/* <Button variant="hero" size="lg">
               Get Quote
-            </Button>
+            </Button> */}
           </div>
 
           {/* Mobile menu button */}
@@ -87,9 +87,9 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-4">
+              {/* <Button variant="hero" size="lg" className="mt-4">
                 Get Quote
-              </Button>
+              </Button> */}
             </nav>
           </div>
         )}
