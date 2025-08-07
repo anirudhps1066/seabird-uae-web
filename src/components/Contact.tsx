@@ -34,6 +34,12 @@ const Contact = () => {
     toast.error("Please fill all required fields");
     return;
   }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(email)) {
+    toast.error("Please enter a valid email address");
+    return;
+  }
 
   toast.success("Form submitted! Redirecting to WhatsApp...");
 
@@ -72,7 +78,7 @@ ${firstName} ${lastName}`;
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email Address",
-      details: ["info@seabirdwaterequipment.com", 'sales@seabirdwaterequipment.com','thahir@seabirdwaterequipment.com'],
+      details: ["info@seabirdwaterequipment.com", 'sales@seabirdwaterequipment.com'],
     },
     {
       icon: <MapPin className="h-6 w-6" />,
