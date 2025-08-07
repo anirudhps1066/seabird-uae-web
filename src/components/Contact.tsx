@@ -40,6 +40,11 @@ const Contact = () => {
     toast.error("Please enter a valid email address");
     return;
   }
+  if (!/^\d{10}$/.test(phone)) {
+  toast.error("Please enter a valid 10-digit phone number");
+  return;
+}
+
 
   toast.success("Form submitted! Redirecting to WhatsApp...");
 
